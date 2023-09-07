@@ -14,10 +14,10 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Testcase_5 {
-	@Test
-	public void testcase5() throws InterruptedException {
-		
+public class Testcase_6 {
+	
+@Test
+	public void testcase6() throws InterruptedException {
 	WebDriverManager.chromedriver().setup();
 	ChromeDriver driver = new ChromeDriver();
 	driver.manage().window().maximize();
@@ -29,7 +29,7 @@ public class Testcase_5 {
 	driver.findElement(By.cssSelector("a[href='signup']")).click();
 	driver.findElement(By.name("email_id")).sendKeys("pspk2@gmail.com");
 	driver.findElement(By.name("pwd")).sendKeys("abc@123");
-	driver.findElement(By.name("pwd2")).sendKeys("abc@123");
+	driver.findElement(By.name("pwd2")).sendKeys("abc@124");
 	driver.findElement(By.name("name")).sendKeys("kiran");
 	driver.findElement(By.name("address")).sendKeys("surya nagar");
 	driver.findElement(By.name("city")).sendKeys("suryapet");
@@ -38,7 +38,7 @@ public class Testcase_5 {
 
 	try {
 	    // Define the location where you want to save the screenshot
-	    File destination = new File("D:\\Course_work\\Capstone_Projects\\Screenshots\\Email_validation.png");
+	    File destination = new File("D:\\Course_work\\Capstone_Projects\\Screenshots\\password_validation.png");
 	    
 	    // Copy the captured screenshot to the specified location
 	    FileUtils.copyFile(screenshotFile, destination);
@@ -50,7 +50,7 @@ public class Testcase_5 {
 	
 	WebElement bodyElement = driver.findElement(By.tagName("body"));
 	String bodyContent = bodyElement.getText();
-	String textTocheck = "This email id already exists";
+	String textTocheck = "Error , Passwords do not match.";
 	
 	boolean containstext = bodyContent.contains(textTocheck);
 	
@@ -63,5 +63,4 @@ public class Testcase_5 {
 	
 driver.quit();	
 }
-	
 }
