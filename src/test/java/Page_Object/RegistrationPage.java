@@ -24,7 +24,7 @@ public class RegistrationPage {
 	Thread.sleep(2000);
 	driver.findElement(By.linkText("Login/Signup")).click();
 	driver.findElement(By.cssSelector("a[href='signup']")).click();
-	driver.findElement(By.name("email_id")).sendKeys("pspk3@gmail.com");
+	driver.findElement(By.name("email_id")).sendKeys("pspk4@gmail.com");
 	driver.findElement(By.name("pwd")).sendKeys("abc@123");
 	driver.findElement(By.name("pwd2")).sendKeys("abc@123");
 	driver.findElement(By.name("name")).sendKeys("kiran");
