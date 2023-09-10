@@ -43,13 +43,6 @@ public void homepage() throws InterruptedException {
 
 		driver.findElement(By.tagName("button")).click();
 		driver.quit();
-		
-		
-		
-
-
-
-
 }
 	
 }
